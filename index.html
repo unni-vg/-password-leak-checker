@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Leak Checker Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="dashboard">
+      <header class="hero">
+        <h1>Password Leak Checker Dashboard</h1>
+        <p>
+          Check if a password appears in known data breaches using the
+          Have I Been Pwned k-anonymity API.
+        </p>
+      </header>
+
+      <section class="panel input-panel">
+        <label for="password">Password</label>
+        <div class="input-row">
+          <input id="password" type="password" autocomplete="off" placeholder="Enter password to check" />
+          <button id="toggleVisibility" type="button" class="secondary">Show</button>
+        </div>
+        <div class="actions">
+          <button id="checkBtn" type="button">Check Exposure</button>
+        </div>
+        <p class="privacy-note">
+          Privacy-first check: only the first 5 characters of the SHA-1 hash are sent.
+        </p>
+      </section>
+
+      <section class="panel stats-panel">
+        <h2>Overview</h2>
+        <div class="stats-grid">
+          <article>
+            <span class="label">Checks Run</span>
+            <span id="checksRun" class="value">0</span>
+          </article>
+          <article>
+            <span class="label">Exposed Passwords</span>
+            <span id="exposedCount" class="value warning">0</span>
+          </article>
+          <article>
+            <span class="label">Safe Passwords</span>
+            <span id="safeCount" class="value success">0</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel results-panel">
+        <h2>Latest Result</h2>
+        <div id="status" class="status idle">Enter a password and run a check.</div>
+        <div id="resultDetail" class="result-detail"></div>
+        <ul id="history" class="history"></ul>
+      </section>
+    </main>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
