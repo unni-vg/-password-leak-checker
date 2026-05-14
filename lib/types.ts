@@ -1,0 +1,2 @@
+export type Confidence='high'|'medium'|'low';
+export type Threat={id:string;title:string;date:string;category:string;severity:'critical'|'high'|'medium'|'low';summary:string;affectedProducts:string[];impact:string;actions:string[];sources:{name:string;url:string}[];iocs:{type:string;value:string;status:'Verified'|'Reported'|'Unconfirmed'}[];mitre:{tactic:string;technique:string;subTechnique?:string;explanation:string}[]};

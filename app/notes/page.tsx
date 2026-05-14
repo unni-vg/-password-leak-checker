@@ -1,0 +1,1 @@
+export default function Notes(){return <div><h2 className='text-xl font-semibold'>SOC Analyst Note Generator</h2><p className='text-sm text-slate-400'>Generate copy-ready markdown and PDF-ready notes from any threat record.</p></div>}
