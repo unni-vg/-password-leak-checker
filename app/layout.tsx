@@ -1,0 +1,2 @@
+import './globals.css'; import Link from 'next/link';
+export default function RootLayout({children}:{children:React.ReactNode}){return <html><body><main className='max-w-7xl mx-auto p-4'><header className='flex justify-between items-center mb-6'><h1 className='text-2xl font-bold'>BlueLens</h1><nav className='flex gap-4 text-sm'>{['/','/cves','/watchlist','/notes','/about'].map(p=><Link key={p} href={p}>{p==='/'?'dashboard':p.slice(1)}</Link>)}</nav></header>{children}</main></body></html>}

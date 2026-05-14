@@ -1,0 +1,2 @@
+import { threats } from '@/lib/mock';
+export default function CVEs(){return <div className='space-y-3'><h2 className='text-xl font-semibold'>CVE Explorer</h2><input className='w-full bg-slate-900 p-2 rounded' placeholder='Search by CVE, vendor, product, actor...' /><ul className='space-y-2'>{threats.map(t=><li key={t.id} className='glass p-3 rounded'>{t.id.toUpperCase()} — {t.title}</li>)}</ul></div>}

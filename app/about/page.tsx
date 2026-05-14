@@ -1,0 +1,1 @@
+export default function About(){return <div className='space-y-2'><h2 className='text-xl font-semibold'>Methodology</h2><p>BlueLens ingests public cyber sources daily, preserves attribution, and separates factual source data from analyst interpretation.</p></div>}

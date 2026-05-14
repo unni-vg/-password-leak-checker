@@ -1,0 +1,1 @@
+export default function Watchlist(){return <div className='space-y-3'><h2 className='text-xl font-semibold'>Watchlist</h2><p className='text-sm text-slate-400'>Track CVEs, products, vendors, actors, and malware families. Highlights appear on dashboard.</p></div>}

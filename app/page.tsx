@@ -1,0 +1,2 @@
+import { ThreatCard } from '@/components/threat-card'; import { threats } from '@/lib/mock';
+export default function Home(){return <section className='space-y-4'><h2 className='text-xl font-semibold'>Threat Operations Dashboard</h2><p className='text-sm text-slate-400'>Updated daily from public advisories and vulnerability feeds.</p><div className='grid md:grid-cols-2 gap-4'>{threats.map(t=><ThreatCard key={t.id} threat={t}/>)}</div></section>}
